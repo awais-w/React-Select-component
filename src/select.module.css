@@ -1,0 +1,76 @@
+.container {
+  position: relative;
+  border: 1px solid slategrey;
+  border-radius: .25em;
+  width: 20em;
+  min-height: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  padding: .5em;
+}
+
+ul.options {
+  position: absolute;
+  top: calc(100% + 0.25em);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid slategrey;
+  border-radius: .25em;
+  gap: .5em;
+  left: 0;
+  width: 20em;
+  max-height: 15em;
+  overflow-y: auto;
+  display: none;
+}
+
+ul.options.show {
+  display: block;
+}
+
+li.option {
+  padding: 0.25em .5em;
+  cursor: pointer;
+}
+
+li.option:hover {
+  background-color: #EEE
+}
+
+li.option.selected {
+  background-color: cyan;
+}
+  
+.clear-btn {
+  background: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.25em;
+  color: #777;
+}
+
+.clear-btn:focus, 
+.clear-btn:hover {
+  color: #333;
+  outline: none;
+}
+
+.value {
+  flex-grow: 1;
+}
+
+.divider {
+  align-self: stretch;
+  width: 0.05em;
+  background-color: #777;
+}
+
+.caret {
+  border: .25em solid transparent;
+  border-top-color: #777;
+  translate: 0 25%; 
+}
